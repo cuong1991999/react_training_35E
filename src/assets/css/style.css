@@ -1,0 +1,57 @@
+.vglasses {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  background-attachment: fixed;
+}
+
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.vglasses-card {
+  position: relative;
+  overflow: hidden;
+}
+.margin {
+  margin: 0 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+.vglasses__model {
+  background-image: url(../img/model.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 585px;
+}
+.vglasses__model img {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  width: 238px;
+  height: 85px;
+  opacity: 0.8;
+}
+
+.vglasses__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  color: white;
+  padding: 20px;
+}
+.vglasses__items {
+  cursor: pointer;
+}
+.box {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.vglasses__pro {
+  background-color: white;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
