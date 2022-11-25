@@ -5,7 +5,7 @@ export default class extends Component {
     return (
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         <div className="container px-lg-5">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             Start Bootstrap
           </a>
 
@@ -28,9 +28,9 @@ export default class extends Component {
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/baitap1"
+                  to="/baitapForm"
                 >
-                  BaiTap1
+                  Form
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -38,9 +38,9 @@ export default class extends Component {
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/baitapState"
+                  to="/baitapForm"
                 >
-                  BaitapState
+                  BaitapForm
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -48,9 +48,9 @@ export default class extends Component {
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/"
+                  to="/formredux"
                 >
-                  About
+                  FormRedux
                 </NavLink>
               </li>
             </ul>

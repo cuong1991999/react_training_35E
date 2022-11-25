@@ -8,7 +8,7 @@ export default class HomeTemplate extends Component {
     return (
       <div>
         <Nav />
-        <div style={{ minHeight: 650 }}>
+        <div className="py-5">
           <Outlet />
         </div>
         <div className="py-5 bg-dark">
