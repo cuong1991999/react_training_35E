@@ -9,8 +9,8 @@ import Baitap1 from './ReactBuoi1/Baitap1';
 import Baitap2 from './BaiTapState/Baitap2';
 import BaitapProps from './Props/BaitapProps';
 import HomeTemplate from './templates/HomeTemplate'
-import BaiTapFormSv from './pages/Form/BaiTapFormSv'
-import FormRedux from './pages/FormRedux/FormRedux';
+import BaiTapFormSv from './Forms/Form/BaiTapFormSv'
+import FormRedux from './Forms/FormRedux/FormRedux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
