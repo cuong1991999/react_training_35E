@@ -5,8 +5,8 @@ export default class extends Component {
     return (
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         <div className="container px-lg-5">
-          <a className="navbar-brand" href="/">
-            Start Bootstrap
+          <a className="navbar-brand" href="/baitapbuger">
+            Bài Tập
           </a>
 
           <button
@@ -28,31 +28,31 @@ export default class extends Component {
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/baitapForm"
+                  to="/baitapbuger"
                 >
-                  Form
+                  BugerRedux
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/baitapForm"
+                  to="/baitapbuger"
                 >
                   BaitapForm
                 </NavLink>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
                     isActive ? "nav-link active bg-dark text-white" : "nav-link"
                   }
-                  to="/formredux"
+                  to="/baitapbuger"
                 >
                   FormRedux
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

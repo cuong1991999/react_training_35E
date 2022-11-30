@@ -11,9 +11,7 @@ export default class HomeTemplate extends Component {
         <div className="py-5">
           <Outlet />
         </div>
-        <div className="py-5 bg-dark">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     );
   }
