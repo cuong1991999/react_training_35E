@@ -37,7 +37,6 @@ export const Formredux = (state = stateDefault, action) => {
         ...state,
         edit: action.edit,
         Id: action.Id,
-        arr: action.arr,
         editItem: action.editItem,
       });
     }
@@ -46,6 +45,22 @@ export const Formredux = (state = stateDefault, action) => {
         ...state,
         arrS: action.arrS,
       });
+    }
+    case "UPDATA": {
+      const { values, enter, Id, edit } = action;
+      let arr = [...state.arr];
+      let index = arr.findIndex((item) => item.id === values.id);
+      if (index !== -1) {
+        arr.splice(index, 1, values);
+      }
+      return {
+        ...state,
+        arr,
+        enter,
+        Id,
+        edit,
+        // editItem: { id: "", phone: "", name: "", email: "" },
+      };
     }
     default:
       return state;

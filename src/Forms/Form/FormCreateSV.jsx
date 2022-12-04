@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export default class FormCreateSV extends Component {
   render() {
-    const { editItem, Submit, Change, values, errors, valid, Id } = this.props;
+    const { editItem, Submit, Change, values, errors, valid, Id, Update } =
+      this.props;
     return (
       <div>
         <form
@@ -80,13 +81,26 @@ export default class FormCreateSV extends Component {
                   </div>
                 </div>
               </div>
-              <button
-                type="submit"
-                disabled={!valid}
-                className={editItem ? "btn btn-primary" : "btn btn-success"}
-              >
-                {editItem ? "Cập Nhật" : "Thêm sinh viên"}
-              </button>
+              {!editItem ? (
+                <button
+                  type="submit"
+                  disabled={!valid}
+                  className="btn btn-success"
+                >
+                  Thêm sinh viên
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="btn btn-warning"
+                  onClick={(e) => {
+                    Update(e);
+                  }}
+                  disabled={!valid}
+                >
+                  Cập nhật
+                </button>
+              )}
             </div>
           </div>
         </form>

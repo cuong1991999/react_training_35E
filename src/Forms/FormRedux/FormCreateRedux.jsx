@@ -82,6 +82,20 @@ class FormCreateRedux extends Component {
       values: { id: "", phone: "", name: "", email: "" },
     });
   };
+  handleUp = (e) => {
+    e.stopPropagation();
+    let enter = this.props.enter + 1;
+
+    let values = this.state.values;
+    const action = {
+      type: "UPDATA",
+      values: values,
+      enter: enter,
+      Id: false,
+      edit: false,
+    };
+    this.props.dispatch(action);
+  };
   componentDidUpdate(preProps, preState) {
     if (preProps.editItem !== this.props.editItem) {
       this.setState({
@@ -165,15 +179,26 @@ class FormCreateRedux extends Component {
                   </div>
                 </div>
               </div>
-              <button
-                type="submit"
-                disabled={this.state.valid}
-                className={
-                  this.props.edit ? "btn btn-primary" : "btn btn-success"
-                }
-              >
-                {this.props.edit ? "Cập nhật" : "Thêm sinh viên"}
-              </button>
+              {this.props.edit ? (
+                <button
+                  type="submit"
+                  disabled={this.state.valid}
+                  className={"btn btn-primary"}
+                  onClick={(e) => {
+                    this.handleUp(e);
+                  }}
+                >
+                  Updata
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={this.state.valid}
+                  className={"btn btn-success"}
+                >
+                  Thêm sinh viên
+                </button>
+              )}
             </div>
           </div>
         </form>

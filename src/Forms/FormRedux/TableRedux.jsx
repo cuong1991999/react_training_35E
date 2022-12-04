@@ -21,12 +21,11 @@ class TableRedux extends Component {
     this.props.dispatch(action);
   };
   handleEdit = (id) => {
-    let arr = this.props.arr.filter((item) => item.id !== id);
     let editItem = this.props.arr.find((item) => item.id === id);
     const action = {
       type: "EDIT",
-      arr: arr,
-      editItem: editItem,
+
+      editItem: { ...editItem },
       edit: true,
       Id: true,
     };

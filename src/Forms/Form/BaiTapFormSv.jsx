@@ -10,6 +10,7 @@ export default class BaiTapFormSv extends Component {
       arr: [],
       searchTerm: "",
       editItem: false,
+
       values: {
         id: "",
         phone: "",
@@ -117,16 +118,34 @@ export default class BaiTapFormSv extends Component {
 
   editSV = (id) => {
     let newEdit = this.state.arr.find((item) => item.id === id);
-    let arr = this.state.arr.filter((item) => item.id !== id);
 
     this.setState({
-      arr,
       values: newEdit,
       editItem: true,
       Id: true,
     });
   };
-
+  updateSv = (e) => {
+    e.stopPropagation();
+    let arr = this.state.arr;
+    let enter = this.state.enter + 1;
+    let index = arr.findIndex((item) => item.id === this.state.values.id);
+    if (index !== -1) {
+      arr.splice(index, 1, this.state.values);
+    }
+    this.setState({
+      arr,
+      editItem: false,
+      Id: false,
+      enter,
+      values: {
+        id: "",
+        phone: "",
+        name: "",
+        email: "",
+      },
+    });
+  };
   save = () => {
     let save = JSON.stringify(this.state.arr);
     localStorage.setItem("SV", save);
@@ -162,6 +181,7 @@ export default class BaiTapFormSv extends Component {
           errors={this.state.errors}
           valid={this.state.valid}
           Id={this.state.Id}
+          Update={this.updateSv}
         />
         <TableSV
           tableSV={this.state.arr}
